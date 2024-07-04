@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include<string.h>
+#include <unistd.h>
+int main() {
+    char str[100],out[100],temp[20];
+    int n,i,j,k=0;
+    out[0] = '\0'; 
+    printf("Enter message: ");
+    gets(str);
+    n=strlen(str);
+    //printf(("YO");
+    for (int i=0;i<=80;i++)
+    {
+    printf("000\n");
+    }  
+    
+    
+    for (int i=0;i<=n;i++)
+    {
+    if (str[i] == ' ')
+    		{
+    		out[i] = ' ';
+    		
+    		continue;
+    		}
+        
+        for (int j=65;j<=(int)str[i];j++,k++)
+            {
+                //printf("%d", (char)j);
+                temp[1] = "";
+                temp[1] = (char)j;
+                out[i] = temp[1];
+                puts(out);
+                usleep(50000);
+                
+            }
+            
+            
+         //printf("YO");
+            
+    }
+
+return 0;
+}
+
